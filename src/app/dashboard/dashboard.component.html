@@ -1,0 +1,11 @@
+<!-- <header>
+    <nav [language]="language"></nav>
+</header> -->
+
+<div>
+    <select class="btn btn-primary" [(ngModel)]="language" (change)="getLanguage()">
+        <option *ngFor="let language of languages" [value]="language.id">{{ language.name }}</option>
+    </select>
+    <nav [language]="language"></nav>
+</div>
+

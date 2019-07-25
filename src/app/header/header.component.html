@@ -1,0 +1,5 @@
+<select class="btn btn-primary" [(ngModel)]="language" (change)="getLanguage()">
+    <option *ngFor="let language of languages" [value]="language.id">{{ language.name }}</option>
+</select>
+
+Current language - {{ language }}
