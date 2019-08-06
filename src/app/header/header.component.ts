@@ -12,7 +12,7 @@ import { LanguageService } from '../services/language.service';
 
 export class HeaderComponent implements OnInit {
 
-  public language: string = '';
+  private language: string = '';
 
   languages: Array<Language>;
 
@@ -24,7 +24,11 @@ export class HeaderComponent implements OnInit {
     this.language = this.languageService.default_language;
   }
 
-  // getLanguage() {
-  //   return this.language;
-  // }
+  getLanguage():string {
+    return this.language;
+  }
+  
+  setLanguage(language: string) {
+    this.language = language;
+  }
 }
